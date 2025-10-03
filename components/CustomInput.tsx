@@ -1,10 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-
-const CustomInput = () => {
+import { StyleSheet, Text, View,TextInput } from 'react-native'
+import GlobalStyles from '../styles'
+interface Probs{
+  placeholder:string,
+  onChangeText:(text:string)=>void
+}
+const CustomInput = ({placeholder,onChangeText}:Probs) => {
   return (
-    <View>
-      <Text>CustomInput</Text>
+    <View style={[GlobalStyles.input]}>
+      <TextInput placeholder={placeholder} onChangeText={onChangeText} />
     </View>
   )
 }

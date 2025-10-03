@@ -9,9 +9,14 @@ export default StyleSheet.create({
         borderRadius:10,
         paddingHorizontal:16,
         paddingVertical:10,
-        borderColor:'#444',
         backgroundColor:"#009944",
         color:"#fff"
 
+    },
+    input:{
+        borderRadius:10,
+        paddingHorizontal:16,
+        paddingVertical:10,
+        borderColor:"#009944",
     }
 })

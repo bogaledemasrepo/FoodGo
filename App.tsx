@@ -1,6 +1,6 @@
-import { NavigationContainer, CompositeScreenProps } from '@react-navigation/native';
+import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator, NativeStackScreenProps } from "@react-navigation/native-stack"
-import { createBottomTabNavigator, BottomTabScreenProps } from '@react-navigation/bottom-tabs';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import IndexScreen from './screens/IndexScreen';
 import AuthScreen from './screens/AuthScreen';
 import LoginScreen from './screens/LoginScreen';
@@ -13,7 +13,7 @@ import OrdersScreen from './screens/OrdersScreen';
 import CartScreen from './screens/CartScreen';
 
 // 1. Define the Parameter Lists (copied from types.ts above)
-// In a real project, this would be in a separate 'types.ts' file
+// In a real project, tghis would be in a separate 'types.ts' file
 export type RootStackParamList = {
   IndexScreen: undefined;
   auth: undefined;
