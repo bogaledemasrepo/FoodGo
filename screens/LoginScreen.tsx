@@ -17,6 +17,7 @@ const LoginScreen:React.FC<LoginScreenProbs> = ({ navigation }) => {
   }
    const submitHandler=()=>{
     console.log("Form submitted.")
+    navigation.navigate("Tabs")
   }
   return (
     <View style={{flex:1,backgroundColor:"#fff"}}>

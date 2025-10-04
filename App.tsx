@@ -11,6 +11,7 @@ import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import CartScreen from './screens/CartScreen';
+import {MaterialCommunityIcons} from "@expo/vector-icons"
 
 // 1. Define the Parameter Lists (copied from types.ts above)
 // In a real project, tghis would be in a separate 'types.ts' file
@@ -47,12 +48,12 @@ export type VerifyOtpProbs= NativeStackScreenProps<RootStackParamList, 'verifyOt
 // Tabs Component
 function Tabs() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator screenOptions={{headerShown:false,tabBarActiveTintColor:"#0a0"}}>
       {/* Tab screens are defined here */}
-      <Tab.Screen name="Home" component={HomeScreen} options={{headerShown:false}}/>
-       <Tab.Screen name="Cart" component={CartScreen} />
-       <Tab.Screen name="Orders" component={OrdersScreen} />
-      <Tab.Screen name="Profile" component={ProfileScreen} />
+      <Tab.Screen name="Home" component={HomeScreen} options={{tabBarIcon:({color,size,focused})=><MaterialCommunityIcons name='home' color={focused?color:"#3333334f"} size={size} />}}/>
+      <Tab.Screen name="Cart" component={CartScreen} options={{tabBarIcon:({color,size,focused})=><MaterialCommunityIcons name='cart' color={focused?color:"#3333334f"} size={size} />}}/>
+      <Tab.Screen name="Orders" component={OrdersScreen} options={{tabBarIcon:({color,size,focused})=><MaterialCommunityIcons name='heart' color={focused?color:"#3333334f"} size={size} />}}/>
+      <Tab.Screen name="Profile" component={ProfileScreen} options={{tabBarIcon:({color,size,focused})=><MaterialCommunityIcons name='account' color={focused?color:"#3333334f"} size={size} />}}/>
     </Tab.Navigator>
   );
 }
