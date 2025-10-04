@@ -11,11 +11,9 @@ import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import CartScreen from './screens/CartScreen';
-import { View } from 'react-native';
 
 // 1. Define the Parameter Lists (copied from types.ts above)
 // In a real project, tghis would be in a separate 'types.ts' file
-const headerBackground=()=><View style={{backgroundColor:"#009944",flex:1}}></View>;
 export type RootStackParamList = {
   IndexScreen: undefined;
   auth: undefined;
@@ -43,6 +41,7 @@ export type IndexScreenProps = NativeStackScreenProps<RootStackParamList, 'Index
 export type LoginScreenProbs= NativeStackScreenProps<RootStackParamList, 'login'>;
 export type SignupScreenProbs= NativeStackScreenProps<RootStackParamList, 'signup'>;
 export type ForgotPasswordcreenProbs= NativeStackScreenProps<RootStackParamList, 'forgotPassword'>;
+export type VerifyOtpProbs= NativeStackScreenProps<RootStackParamList, 'verifyOtp'>;
 
 
 // Tabs Component
@@ -69,7 +68,7 @@ export default () => {
           <Stack.Screen name='signup' component={SignupScreen} />
           <Stack.Screen name='verifyOtp' component={VerifyOtp} />
           <Stack.Screen name='forgotPassword' component={ForgotPassword} />
-          <Stack.Screen name='Tabs' component={Tabs} options={{ headerShown: false }} />
+          <Stack.Screen name='Tabs' component={Tabs} />
       </Stack.Navigator>
     </NavigationContainer>
   );

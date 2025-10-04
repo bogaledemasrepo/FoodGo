@@ -1,11 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
 import CustomButton from '../components/CustomButton'
 import CustomInput from '../components/CustomInput'
-import CustomCheckBox from '../components/CustomCheckBox'
-import { Image } from 'expo-image'
 import Header from '../components/Header'
 import { ForgotPasswordcreenProbs } from '../App'
 
@@ -18,6 +15,7 @@ const ForgotPassword:React.FC<ForgotPasswordcreenProbs> = ({ navigation }) => {
   }
    const submitHandler=()=>{
     console.log("Form submitted.")
+    navigation.navigate("verifyOtp",{userId:"1234"})
   }
   return (
     <View style={{flex:1,backgroundColor:"#fff"}}>
