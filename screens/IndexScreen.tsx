@@ -18,7 +18,6 @@ const IndexScreen: React.FC<IndexScreenProps> = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView style={{flex: 1}}>
       <View style={styles.container}>
         <View style={{
           flex:3,
@@ -29,18 +28,17 @@ const IndexScreen: React.FC<IndexScreenProps> = ({ navigation }) => {
         contentFit="cover"
       />
         </View>
-        <View style={{flex:2,padding:8}}>
+        <View style={{flex:2,paddingVertical:8}}>
           <Text style={{fontSize:20,fontWeight:"bold",textAlign:"center",color:"#444"}}>Explore FoodGo</Text>
           <Text style={{fontSize:16,fontWeight:"bold",textAlign:"center",color:"#444"}}>Get Experiance of there benefites</Text>
         <View style={{marginBottom:16}}>
-          <Text style={{fontSize:12,marginTop:8,marginHorizontal:16,textAlign:"justify",color:"#333333ab"}}>Get Experiance of there benefites Get Experiance of there benefites Get Experiance of there benefites.</Text>
+          <Text style={{fontSize:12,marginTop:8,textAlign:"justify",color:"#333333ab"}}>Get Experiance of there benefites Get Experiance of there benefites Get Experiance of there benefites.</Text>
         </View>
         <CustomButton onPress={handleGetStarted}>
           <Text style={{fontWeight:"bold",fontSize:18,color:"#fff",textAlign:"center"}}>Get started</Text>
           </CustomButton>
         </View>
       </View>
-    </SafeAreaView>
   )
 }
 
@@ -49,6 +47,7 @@ export default IndexScreen
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    paddingHorizontal:16
   },
   image: {
     flex: 1,

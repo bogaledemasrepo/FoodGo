@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TextInput, View } from 'react-native'
+import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { StatusBar } from 'expo-status-bar'
@@ -21,11 +21,10 @@ const LoginScreen:React.FC<LoginScreenProbs> = ({ navigation }) => {
   }
   return (
     <View style={{flex:1,backgroundColor:"#fff"}}>
-    <SafeAreaView >
       <Header>
         <Text style={{color:"#fff",fontSize:18,fontWeight:"600"}}>Log In</Text>
       </Header>
-      <View style={{paddingHorizontal:8,paddingVertical:24,gap:8}}> 
+      <View style={{paddingHorizontal:16,paddingVertical:24,gap:8}}> 
         <CustomInput placeholder='Enter your email' onChangeText={()=>{}} label='Email' />
         <CustomInput placeholder='Enter your password' onChangeText={()=>{}} label='Password' />
           <View style={{width:"100%",display:"flex",justifyContent:"space-between",flexDirection:"row",alignItems:"center",marginVertical:4}}>
@@ -58,7 +57,6 @@ const LoginScreen:React.FC<LoginScreenProbs> = ({ navigation }) => {
         </View>
       </View>
       <StatusBar style="light" hidden />
-    </SafeAreaView>
     </View>
   )
 }

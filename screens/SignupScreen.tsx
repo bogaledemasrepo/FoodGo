@@ -22,11 +22,10 @@ const SignupScreen:React.FC<SignupScreenProbs> = ({ navigation }) => {
   
   return (
     <View style={{flex:1,backgroundColor:"#fff"}}>
-    <SafeAreaView >
       <Header>
         <Text style={{color:"#fff",fontSize:18,fontWeight:"600"}}>Sign Up</Text>
       </Header>
-      <View style={{paddingHorizontal:8,paddingVertical:24,gap:8}}> 
+      <View style={{paddingHorizontal:16,paddingVertical:24,gap:8}}> 
         <CustomInput placeholder='Enter your email' onChangeText={()=>{}} label='Email' />
         <CustomInput placeholder='Enter your password' onChangeText={()=>{}} label='Password' />
          <CustomInput placeholder='Enter your password' onChangeText={()=>{}} label='Confirm password' />
@@ -53,7 +52,6 @@ const SignupScreen:React.FC<SignupScreenProbs> = ({ navigation }) => {
         </CustomButton>
       </View>
       <StatusBar style="light" hidden />
-    </SafeAreaView>
     </View>
   )
 }

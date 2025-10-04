@@ -42,6 +42,7 @@ const Tab = createBottomTabNavigator<RootTabParamList>();
 export type IndexScreenProps = NativeStackScreenProps<RootStackParamList, 'IndexScreen'>;
 export type LoginScreenProbs= NativeStackScreenProps<RootStackParamList, 'login'>;
 export type SignupScreenProbs= NativeStackScreenProps<RootStackParamList, 'signup'>;
+export type ForgotPasswordcreenProbs= NativeStackScreenProps<RootStackParamList, 'forgotPassword'>;
 
 
 // Tabs Component
