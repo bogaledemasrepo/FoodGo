@@ -41,6 +41,7 @@ const Tab = createBottomTabNavigator<RootTabParamList>();
 // This type is used to get the navigate function with type safety
 export type IndexScreenProps = NativeStackScreenProps<RootStackParamList, 'IndexScreen'>;
 export type LoginScreenProbs= NativeStackScreenProps<RootStackParamList, 'login'>;
+export type SignupScreenProbs= NativeStackScreenProps<RootStackParamList, 'signup'>;
 
 
 // Tabs Component
@@ -64,9 +65,9 @@ export default () => {
           <Stack.Screen name='IndexScreen' component={IndexScreen} />
           <Stack.Screen name='auth' component={AuthScreen} />
           <Stack.Screen name='login' component={LoginScreen} />
-          <Stack.Screen name='signup' component={SignupScreen} options={{headerBackground}}/>
-          <Stack.Screen name='verifyOtp' component={VerifyOtp} options={{headerBackground}}/>
-          <Stack.Screen name='forgotPassword' component={ForgotPassword} options={{headerBackground}}/>
+          <Stack.Screen name='signup' component={SignupScreen} />
+          <Stack.Screen name='verifyOtp' component={VerifyOtp} />
+          <Stack.Screen name='forgotPassword' component={ForgotPassword} />
           <Stack.Screen name='Tabs' component={Tabs} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>

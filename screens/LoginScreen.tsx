@@ -16,7 +16,9 @@ const LoginScreen:React.FC<LoginScreenProbs> = ({ navigation }) => {
    const onSignUp=()=>{
     navigation.navigate('signup');
   }
-  
+   const submitHandler=()=>{
+    console.log("Form submitted.")
+  }
   return (
     <View style={{flex:1,backgroundColor:"#fff"}}>
     <SafeAreaView >
@@ -30,7 +32,7 @@ const LoginScreen:React.FC<LoginScreenProbs> = ({ navigation }) => {
             <CustomCheckBox label='Remember me'/>
             <Text onPress={onForgotPassword} style={{fontSize:16,color:"#3333337e"}}>Forgot password?</Text>
           </View>
-        <CustomButton onPress={()=>{}}>
+        <CustomButton onPress={submitHandler}>
           <Text style={{fontWeight:"bold",fontSize:18,color:"#fff",textAlign:"center"}}>Log In</Text>
         </CustomButton>
         <View style={{width:'100%',height:32,display:"flex",position:'relative',alignItems:"center",justifyContent:"center"}}>
