@@ -11,9 +11,11 @@ import HomeScreen from './screens/HomeScreen';
 import ProfileScreen from './screens/ProfileScreen';
 import OrdersScreen from './screens/OrdersScreen';
 import CartScreen from './screens/CartScreen';
+import { View } from 'react-native';
 
 // 1. Define the Parameter Lists (copied from types.ts above)
 // In a real project, tghis would be in a separate 'types.ts' file
+const headerBackground=()=><View style={{backgroundColor:"#009944",flex:1}}></View>;
 export type RootStackParamList = {
   IndexScreen: undefined;
   auth: undefined;
@@ -38,6 +40,7 @@ const Tab = createBottomTabNavigator<RootTabParamList>();
 // 3. Define the Screen Prop Type for IndexScreen
 // This type is used to get the navigate function with type safety
 export type IndexScreenProps = NativeStackScreenProps<RootStackParamList, 'IndexScreen'>;
+export type LoginScreenProbs= NativeStackScreenProps<RootStackParamList, 'login'>;
 
 
 // Tabs Component
@@ -57,13 +60,13 @@ function Tabs() {
 export default () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='IndexScreen'>
-          <Stack.Screen name='IndexScreen' component={IndexScreen} options={{headerShown:false}}/>
+      <Stack.Navigator initialRouteName='IndexScreen' screenOptions={{headerShown:false}}>
+          <Stack.Screen name='IndexScreen' component={IndexScreen} />
           <Stack.Screen name='auth' component={AuthScreen} />
           <Stack.Screen name='login' component={LoginScreen} />
-          <Stack.Screen name='signup' component={SignupScreen} />
-          <Stack.Screen name='verifyOtp' component={VerifyOtp} />
-          <Stack.Screen name='forgotPassword' component={ForgotPassword} />
+          <Stack.Screen name='signup' component={SignupScreen} options={{headerBackground}}/>
+          <Stack.Screen name='verifyOtp' component={VerifyOtp} options={{headerBackground}}/>
+          <Stack.Screen name='forgotPassword' component={ForgotPassword} options={{headerBackground}}/>
           <Stack.Screen name='Tabs' component={Tabs} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>

@@ -35,7 +35,9 @@ const IndexScreen: React.FC<IndexScreenProps> = ({ navigation }) => {
         <View style={{marginBottom:16}}>
           <Text style={{fontSize:12,marginTop:8,marginHorizontal:16,textAlign:"justify",color:"#333333ab"}}>Get Experiance of there benefites Get Experiance of there benefites Get Experiance of there benefites.</Text>
         </View>
-        <CustomButton title="Get started" onPress={handleGetStarted}/> 
+        <CustomButton onPress={handleGetStarted}>
+          <Text style={{fontWeight:"bold",fontSize:18,color:"#fff",textAlign:"center"}}>Get started</Text>
+          </CustomButton>
         </View>
       </View>
     </SafeAreaView>

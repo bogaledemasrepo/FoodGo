@@ -6,11 +6,14 @@ export default StyleSheet.create({
         width:"100%"
     },
     btn:{
-        borderRadius:10,
+        borderRadius:8,
+        height:48,
         paddingHorizontal:16,
         paddingVertical:10,
         backgroundColor:"#009944",
-        color:"#fff"
+        color:"#fff",
+        borderWidth:1,
+        borderColor:"#00000015"
 
     },
     input:{
